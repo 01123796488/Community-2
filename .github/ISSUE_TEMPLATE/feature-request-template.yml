@@ -1,6 +1,6 @@
 name: "Submit a Feature Request"
 title: (Enter title for this Discussion)
-about: Tell the GitHub product team about your idea
+description: Tell the GitHub product team about your idea
 labels: 
 - "enhancement"
 body:
