@@ -9,7 +9,7 @@ body:
     label: Select GitHub product
     description: Which area of GitHub do you want us to improve?
     options:
-      - "Actions"
+      - "🛳️ Actions & Packages"
       - "Yes - GHAE 3.2"
       - "Yes - GHAE 3.3"
       - "Yes - GHAE 3.4"
