@@ -17,12 +17,16 @@ body:
       - "🎙️ Discussions"
       - "🐙 Issues"
       - "⭐ Lists"
+      - "📱 Mobile"
+      - "🖼️ Profile"
+      - "✔️ Pull Requests"
+      - "💖 Sponsors"
   validations:
     required: true
 - type: textarea
   attributes:
     label: "Short description of the project:"
-    description: "Tell us about your feature request! Make sure to read our guide on How to Write a Great Feature Request"
+    description: "Tell us about your feature request! Make sure to read our guide on [How to Write a Great Feature Request](https://www.google.com/)"
   validations:
     required: true
  
