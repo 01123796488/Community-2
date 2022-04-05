@@ -1,46 +1,14 @@
-name: 🌱 Alpha, Tier 4 release
-title: (Enter name or description of release) - [Alpha]
-description: Incremental updates that require little to no marketing support. Create at least 7-28 days ahead of the target ship date.
+name: Feature Request
+title: (Enter title for this Discussion)
 labels: 
-- "Alpha"
-- "Tier 4"
-- "Release FAQ - NA"
+- "enhancement"
 body:
-- type: markdown
-  attributes:
-    value: |-
-      Thank you for opening up a releases issue! The intent of this is to create alignment, and less "complete" release issues created earlier are better than "perfect" issues created when everything is fully known.
-
-      Adding labels on this release issue and adding it to the "Product releases" project table helps to categorize and track the timeframe for the ship. Release owners (that's you!) should apply this information near the time of creating the issue or as soon possible.
-
-      There should be a label for:
-      - plan (All dotcom products, PRO, Team...)
-      - release phase (Alpha, Public Beta, GA, etc.) - If this is for a different release phase, use a different issue template.
-      - GHES and version (GHES - NA or GHES, GHES 2.xx)
-
-      Read about the definitions for each release phase, deciding between them, and how to go about executing them at https://github.com/github/product/blob/master/product-release-phases.md
-
-      Every week the product operations team checks for this information and will ask for you to provide anything that's missing. See the README.md guidance as needed.
-- type: textarea
-  attributes:
-    label: "Short description of the project:"
-    description: "What's shipping? What is the direct action you want customer/users to take for this release? What customer or business outcomes/metrics do you expect to influence with this release? These could be metrics on the Product Growth Chart, for example."
-  validations:
-    required: true
-- type: input
-  attributes:
-    label: Expected ship date
-    description: Use specific date format YYYY-MM-DD, and please avoid non-specific dates such as "FYQ4" or "June". Pick a best-guess release date and revise as needed. If shipping different phases (Alpha, Beta, GA) create separate release issues and link them through comments/descriptions.
-    value: |-
-      YYYY-MM-DD 
-  validations:
-    required: true
 - type: dropdown
   attributes:
     label: Will this feature, in its current release phase, flow into GitHub AE?
     description: This is controlled technically by whether the feature is still wrapped in a feature flag, has GHAE exclusion logic, or whether the flag is explicitly activated for GHAE. If so, select "Yes" and also pick the version label (if known). The GHES version will likely be the basis for the GHAE version. If the beta, for example, won't but the GA will, select "No" and also apply the `GHAE - NA` label to this issue.
     options:
-      - "No"
+      - "Actions"
       - "Yes - GHAE 3.2"
       - "Yes - GHAE 3.3"
       - "Yes - GHAE 3.4"
@@ -49,143 +17,10 @@ body:
       - "Yes - GHAE version TBD"
   validations:
     required: true
-- type: dropdown
+    
+- type: markdown
   attributes:
-    label: Will this feature, in its current release phase, flow into GitHub Enterprise Server?
-    description: This is controlled technically by whether the feature is still wrapped in a feature flag, has GHES exclusion logic, or whether the flag is explicitly activated for GHES. If so, select "Yes" and pick the version (if known). See the [GHES release schedule](https://github.com/github/enterprise-releases/blob/master/releases.json) for the feature freeze dates. If the beta, for example, won't but the GA will, select "No" and also apply the `GHES - NA` label to this issue.
-    options:
-      - "No"
-      - "Yes - GHES 3.2"
-      - "Yes - GHES 3.3"
-      - "Yes - GHES 3.4"
-      - "Yes - GHAE 3.5"
-      - "Yes - GHES 3.6"
-      - "Yes - GHES version TBD"
-  validations:
-    required: true
-- type: dropdown
-  attributes:
-    label: Will this feature require documentation?
-    description: If you're not sure, please select TBD to explore possible Docs impact with the Docs team.
-    options:
-      - "Yes--Automatically create a docs issue for me"
-      - "Yes--A docs issue already exists and I will link it below"
-      - "No"
-      - "TBD"
-  validations:
-    required: true
-- type: dropdown
-  attributes:
-    label: Is this release security related (fixes a vulnerability or improves our security posture)?
-    description: If so, it should probably have a "Security review" submitted and linked in the "release reviews" section below. Please link the relevant issue from the `github/security` repository, if there is one, and apply a `SECURITY` label to this issue.
-    options:
-      - "Yes"
-      - "No"
-  validations:
-    required: true
-- type: dropdown
-  attributes:
-    label: Is this release open source related (contributes to a new or existing open source project on GitHub)?
-    description: If so, it should probably have a few extra eyes. Apply a `open source` label to this issue. See also https://github.com/github/open-source-releases#what-if-this-is-also-a-product-feature-release
-    options:
-      - "Yes"
-      - "No"
-  validations:
-    required: false
-- type: input
-  attributes:
-    label: Service Catalog link
-    description: Link to applicable service at https://catalog.githubapp.com/services
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: Tracking and reference issues
-    description: Include any helpful links like tracking issues, internal roadmap issues, customer feedback issues, PRs, etc.
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: Go-to-market materials checklist
-    description: |-
-      Checklist of items to create before launch, including the typical tier they are associated with. Update each item to confirm whether it's ✅  (In scope) or ❌ (Out of scope) and, once created, add links to the relevant pull requests and issues.
-
-      Click the "Preview" tab for links to docs for each area (but make sure you open these links in a new tab so as not to lose your work here!)
     value: |-
-      - 📄 **[Changelog post][changelog-docs] (Tier 4+):** ❌
-      - 📓 **[GHES and GHAE release notes][release-note-doc] (Tier 4+):** ❌
-      - 📘 **[Docs][docs-content] (Tier 4+):** ✅ - If early access docs are required and a docs-content issue already exists, add a link to the issue here
-      - 📈 **[Metrics][analytics] (Tier 4+):** ✅ - 
-      - ❓ **[Release FAQ][release-faq] (Tier 3+):** ❌
-      - 📰 **[Blog post][blog-post] (Tier 3+):** ❌
-      - 💬 **[Social][social-media] (Tier 3+):** ❌
-      - 🎨 **[Creative][creative] (Tier 3+):** ❌
-      - 💻 **[Website updates][site-design] (Tier 2+):** ❌
-      - 📧 **[Email campaign][email] (Consult):** ❓
-      - 📺 **[Ad campaign][ad] (Consult):** ❓
-      - 📣 **[Internal comms][internal-comms] (Tier 3+):** ❌
+      Tell us about your feature request!
 
-      <!-- Go to market material links (don't edit these!) -->
-      [changelog-docs]: https://github.com/github/blog/blob/master/docs/changelog-documentation.md
-      [docs-content]: https://github.com/github/docs-content/blob/main/CONTRIBUTING.md#using-this-repo
-      [docs-template]: https://github.com/github/docs-content/issues/new?assignees=&labels=Tier+3+or+changelog+only&template=release-tier-3-or-tier-4.yml&title=%5BEstimated+ship+date%5D%3A+Feature+name+or+description+%28release+phase%29
-      [release-note-doc]: https://github.com/github/docs-content/blob/main/contributions/release-notes.md
-      [analytics]: https://github.com/github/analytics
-      [release-faq]: https://github.com/github/releases/blob/master/release-faq/FAQ-TEMPLATE.md
-      [blog-post]: https://github.com/github/blog/issues/new?assignees=&labels=blog&template=new-blog-post.md&title=YYYY-MM-DD+-+Blog+post+title
-      [social-media]: https://github.com/github/social-media/issues/new/choose
-      [creative]: https://github.com/github/creative/issues/new?assignees=joelwasko&labels=NEW&template=project-brief.yml&title=New+Request%3A+%5BPROJECT+TITLE+HERE%5D
-      [site-design]: https://github.com/github/site-design/issues/new?assignees=&labels=&template=0--small-medium-request.md&title=
-      [email]: https://github.com/github/marketing-operations/issues/new?assignees=&labels=&template=SingleTemplate.md
-      [ad]: https://github.com/github/growth-marketing/issues/new?assignees=&labels=&template=digital-ad-campaign.md
-      [internal-comms]: https://github.com/github/internal-communications/issues/new?assignees=&labels=&template=internal-comms-content-review-request.md&title=IC+Review+Request%3A+%5BCONTENT+NAME%2FTOPIC%5D
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: Release reviews checklist
-    description: |-
-      Reviews to be completed before this release. Create or otherwise link in the review issue links for reviews that apply to your release.
-
-      Click the "Preview" tab for links to docs for each area (but make sure you open these links in a new tab so as not to lose your work here!)
-    value: |-
-      - **[Support readiness][support-readiness]:** @github/support-gtm (_Support readiness issue will be added by Support GTM_)
-      - **[Security][security-review]:**
-      - **[Privacy][privacy-review]:**
-      - **[Legal][legal-review]:**
-      - **[Architecture][architecture-review]:**
-      - **[Safety Council][safety-council]:**
-
-      <!-- Review process links (don't edit these!) -->
-      [support-readiness]: https://github.com/github/GTM-Support-Readiness
-      [security-review]: https://github.com/github/security-reviews
-      [privacy-review]: https://github.com/github/privacy
-      [legal-review]: https://github.com/github/CELA-product-counsel
-      [architecture-review]: https://github.com/github/architecture-consultations
-      [safety-council]: https://github.com/github/safety-council/issues/new?assignees=&labels=feature-review-request+%3Athinking%3A&template=feature-review-request.md&title=%5BFeature+review+request%5D+
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: Questions for the product launch reviewers?
-    description: Any questions about go-to-market for this release? Ask here if you're considering whether this release should be coupled with another related release etc.?
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: Teams to inform of this release
-    description: Handles of teams to notify of this release and any subsequent discussion on it
-    value: |-
-      @github/product-marketing
-      @github/enterprise-support
-      @github/support
-      @github/community-engagement
-      @github/legal-product
-      @github/support-gtm (_Support Owner will be assigned by Support GTM_)
-      @github/global-expansion-partnerships
-      
-      <sup>**Please note:** this issue was created from [the alpha, tier 4 issue template][template-issue]. PRs to update @-mentioned teams, individuals, checklists items, etc. welcome.</sup>
-
-      [template-issue]: https://github.com/github/releases/blob/master/.github/ISSUE_TEMPLATE/0-alpha-tier-4-release.yml
-  validations:
-    required: false
+      Read our guide on How to 'Write a Great Feature Request'
