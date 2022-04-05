@@ -22,9 +22,7 @@ body:
 - type: textarea
   attributes:
         label: "Short description of the project:"
-    description: 
-      Tell us about your feature request!
-
-      Read our guide on How to 'Write a Great Feature Request'
+    description: "Tell us about your feature request! Make sure to read our guide on How to Write a Great Feature Request"
   validations:
     required: true
+  
