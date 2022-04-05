@@ -19,9 +19,12 @@ body:
   validations:
     required: true
     
-- type: markdown
+- type: textarea
   attributes:
-    value: |-
+        label: "Short description of the project:"
+    description: 
       Tell us about your feature request!
 
       Read our guide on How to 'Write a Great Feature Request'
+  validations:
+    required: true
