@@ -6,6 +6,8 @@ labels:
 body:
 - type: dropdown
   attributes:
+    label: Select GitHub product
+    description: Which area of GitHub do you want us to improve?
     options:
       - "Actions"
       - "Yes - GHAE 3.2"
