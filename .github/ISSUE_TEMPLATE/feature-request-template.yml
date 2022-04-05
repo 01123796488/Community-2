@@ -18,7 +18,6 @@ body:
       - "Yes - GHAE version TBD"
   validations:
     required: true
-    
 - type: textarea
   attributes:
         label: "Short description of the project:"
