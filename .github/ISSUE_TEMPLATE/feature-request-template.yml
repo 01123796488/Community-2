@@ -10,12 +10,13 @@ body:
     description: Which area of GitHub do you want us to improve?
     options:
       - "🛳️ Actions & Packages"
-      - "Yes - GHAE 3.2"
-      - "Yes - GHAE 3.3"
-      - "Yes - GHAE 3.4"
-      - "Yes - GHAE 3.5"
-      - "Yes - GHAE 3.6"
-      - "Yes - GHAE version TBD"
+      - "🛠️ APIs & Integations"
+      - "🔎 Code Search"
+      - "👩 Copilot"
+      - "🤖 Dependabot"
+      - "🎙️ Discussions"
+      - "🐙 Issues"
+      - "⭐ Lists"
   validations:
     required: true
 - type: textarea
