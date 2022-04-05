@@ -6,8 +6,6 @@ labels:
 body:
 - type: dropdown
   attributes:
-    label: Will this feature, in its current release phase, flow into GitHub AE?
-    description: This is controlled technically by whether the feature is still wrapped in a feature flag, has GHAE exclusion logic, or whether the flag is explicitly activated for GHAE. If so, select "Yes" and also pick the version label (if known). The GHES version will likely be the basis for the GHAE version. If the beta, for example, won't but the GA will, select "No" and also apply the `GHAE - NA` label to this issue.
     options:
       - "Actions"
       - "Yes - GHAE 3.2"
