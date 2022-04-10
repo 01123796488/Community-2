@@ -26,7 +26,7 @@ body:
 - type: textarea
   attributes:
     label: "Post Body:"
-    description: "Tell us about your feedback or idea! If you have a feature requestion, make sure to read our guide on [How to Write a Great Feature Request](https://www.google.com/)"
+    description: "Tell us about your feedback or idea! If you have a feature request, make sure to read our guide on [How to Write a Great Feature Request](https://www.google.com/)"
   validations:
     required: true
  
